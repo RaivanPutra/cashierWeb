@@ -240,6 +240,8 @@ if(isset($_POST['tambahcuy'])){
             WHERE p.idproduk=c.idproduk ORDER BY idcart ASC");
             while ($c = $data_produk1->fetch_assoc()) {
                 $subtotalcart3 = $c['harga_jual'] * $c['quantity'];
+                $pajak = $subtotalcart3 * 11/100;
+                $subtotalcart4 = $subtotalcart3 + $pajak; 
                 $subtotalcart2 += $subtotalcart3;
                 ?>
         <div class="col-12 mb-2">
@@ -253,7 +255,9 @@ if(isset($_POST['tambahcuy'])){
         <?php }?>
         <div class="col-12 bg-secondary border my-3"></div>
         <div class="col-12">
-            <h3>Total Belanja <span class="float-right">Rp.<?php echo ribuan($subtotalcart2) ?></span></h3>
+            <h3>Subtotal <span class="float-right">Rp.<?php echo ribuan($subtotalcart2) ?></span></h3>
+            <h3>PPN 11% <span class="float-right" id="pajak">Rp. <?php echo ribuan($pajak) ?> </span></h3>
+            <h3>Total <div class="float-right"><span id="total" >Rp. <?php echo ribuan($subtotalcart4) ?></span></div></h3>
             <h3>Tunai <div class="float-right">Rp.<span id="bayarnya1"></span></div></h3>
             <h3>Kembali <div class="float-right">Rp.<span id="total2"></span></div></h3>
         </div>
@@ -340,7 +344,7 @@ if(isset($_POST['tambahcuy'])){
 					</tbody>
                 </table>
                 <div class="bg-total p-2 text-right print-none">
-                    Rp.<?php echo ribuan($subtotalcart1) ?>
+                    Rp.<?php echo ribuan($subtotalcart4) ?>
                 </div>
                 <form method="POST" class="mt-2 print-none">
                     <div class="row">
@@ -354,9 +358,10 @@ if(isset($_POST['tambahcuy'])){
                                 <div class="col-7 mb-2 pl-0">
                                     <input type="hidden" name="no_nota" value="<?php echo $kodeCart ?>">
                                     <input type="hidden" name="idpelanggan" id="idpelanggan" required>
-                                    <input type="hidden" name="totalbeli" value="<?php echo $subtotalcart1 ?>" id="hargatotal">
+                                    <input type="hidden" name="totalbeli" value="<?php echo $subtotalcart4 ?>" id="hargatotal">
                                     <input type="number" class="form-control form-control-sm bg-white" placeholder="0"
                                     name="pembayaran" id="bayarnya" onchange="totalnya()" required>
+                                
                                 </div>
                                 <div class="col-5 text-right pt-1 pr-2" style="font-weight:500;">Kembalian :</div>
                                 <div class="col-7 pl-0">
