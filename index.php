@@ -218,16 +218,16 @@ if(isset($_POST['tambahcuy'])){
         </div>
         <div class="col-5">
             <div class="row">
-                <div class="col-6 text-right mb-1"><h3 class="mb-0">TANGGAL :</h3></div>
+                <div class="col-6 text-right mb-1"><h3 class="mb-0">TANGGAL : </h3></div>
                 <div class="col-6 pl-1 mb-1"><h3 class="mb-0"><?php echo date('d-m-Y') ?></h3></div>
-                <div class="col-6 text-right"><h3 class="mb-0">PUKUL :</h3></div>
+                <div class="col-6 text-right"><h3 class="mb-0">PUKUL : </h3></div>
                 <div class="col-6 pl-1"><h3 class="mb-0" id="jam-print"></h3></div>
             </div>
         </div>
         <div class="col-12 bg-secondary border my-3"></div>
         <div class="col-12 mb-3">
             <div class="row">
-                <div class="col-1 text-center"><h3 style="font-weight:700;">QTY</h3></div>
+                <div class="col-1 text-center"><h3 style="font-weight:700; margin-right: 5px;">QTY</h3></div>
                 <div class="col"><h3 style="font-weight:700;">PRODUK</h3></div>
                 <div class="col text-center"><h3 style="font-weight:700;">HARGA</h3></div>
                 <div class="col text-right"><h3 style="font-weight:700;">SUBTOTAL</h3></div>
@@ -267,7 +267,7 @@ if(isset($_POST['tambahcuy'])){
         </div>
         <div class="col-12 bg-secondary border my-3"></div>
         <div class="col-12 text-center">
-            <h3>* Terima Kasih Telah Berbelanja Di Toko Kami *</h3>
+            <h4>* Terima Kasih Telah Berbelanja Di Toko Kami *</h4>
             <p class="h4 text-muted">Powered By PT.PINS</p>
         </div>
     </div><!-- end row -->
