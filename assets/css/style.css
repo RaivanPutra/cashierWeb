@@ -278,6 +278,7 @@ td.catatan {
 
 @media print {
   body * {
+    justify-content: space-between;
     visibility: hidden;
   }
   #print,
@@ -298,6 +299,7 @@ td.catatan {
   }
   @page {
     size: a6 portrait !important;
+    margin-left: 5mm;
     margin: 0;
   }
 }

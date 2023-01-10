@@ -240,9 +240,9 @@ if(isset($_POST['tambahcuy'])){
             WHERE p.idproduk=c.idproduk ORDER BY idcart ASC");
             while ($c = $data_produk1->fetch_assoc()) {
                 $subtotalcart3 = $c['harga_jual'] * $c['quantity'];
-                $pajak = $subtotalcart3 * 11/100;
-                $subtotalcart4 = $subtotalcart3 + $pajak; 
                 $subtotalcart2 += $subtotalcart3;
+                $pajak = $subtotalcart2 * 11/100;
+                $subtotalcart4 = $subtotalcart2 + $pajak
                 ?>
         <div class="col-12 mb-2">
             <div class="row">
