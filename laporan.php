@@ -113,7 +113,7 @@ include 'config.php';
 </div><!-- end row -->
 
 
-<div class="card">
+<!-- <div class="card">
     <div class="card-header">
         <div class="card-tittle">
             <i class="fa fa-table me-2"></i> Data Laporan 
@@ -173,7 +173,7 @@ include 'config.php';
 					</tbody>
                 </table>
         </div>
-</div>
+</div> -->
 
 <?php 
 	if(!empty($_GET['hapus'])){

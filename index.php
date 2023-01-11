@@ -205,31 +205,33 @@ if(isset($_POST['tambahcuy'])){
     }
 ?>
 
-<div class="d-none pt-5 px-4 print-show">
+   
+<div class="d-none pt-5 px-4 print-show" style="font-family: 'Fake Receipt'">
     <div class="row">
         <div class="col-12 text-center mb-2">
-            <h1 style="font-size: 20pt; font-weight: bold;"><?php echo $toko ?></h1>
-            <h4 class="mb-0" style="font-size: 14px;"><?php echo $alamat ?></h4>
-            <h4 class="mb-2" style="font-size: 14px;">Tel : <?php echo $telp  ?></h4>
+            <!-- <h1 style="font-size: 20pt; font-weight: bold;"><?php echo $toko ?></h1> -->
+            <img src="rolex.png" alt="" style="width:240px; height:100px;">
+            <h4 class="mb-0" style="font-size: 14px; font-weight:600;"><?php echo $alamat ?></h4>
+            <h4 class="mb-2" style="font-size: 14px; font-weight:600;">Tel : <?php echo $telp  ?></h4>
         </div>
         <div class="col-7">
-            <h3 class="mb-0" style="text-transform: uppercase; font-size: 14px;">INVOICE : <?php echo $kodeCart ?></h3>
-            <h3 class="mb-0" style="text-transform: uppercase; font-size: 14px;">KASIR : <?php echo $user ?></h3>
+            <h3 class="mb-0" style="text-transform: uppercase; font-size: 13px; font-weight:600;">INVOICE : <?php echo $kodeCart ?></h3>
+            <h3 class="mb-0" style="text-transform: uppercase; font-size: 13px; font-weight:600;">KASIR : <?php echo $user ?></h3>
         </div>
         <div class="col-5">
             <div class="row">
-                <div class="col-6 text-right mb-1"><h3 class="mb-0" style="font-size: 14px;">TGL : </h3></div>
-                <div class="col-6 pl-1 mb-1"><h3 class="mb-0" style="font-size: 14px;"><?php echo date('d-m-Y') ?></h3></div>
-                <div class="col-6 text-right"><h3 class="mb-0" style="font-size: 14px;">JAM : </h3></div>
-                <div class="col-6 pl-1"><h3 class="mb-0" id="jam-print" style="font-size: 14px;"></h3></div>
+                <div class="col-6 text-right mb-1"><h3 class="mb-0" style="font-size: 13px; font-weight:600;">TGL : </h3></div>
+                <div class="col-6 pl-1 mb-1"><h3 class="mb-0" style="font-size: 12px; font-weight:600;"><?php echo date('d-m-Y') ?></h3></div>
+                <div class="col-6 text-right"><h3 class="mb-0" style="font-size: 13px; font-weight:600;">JAM : </h3></div>
+                <div class="col-6 pl-1"><h3 class="mb-0" id="jam-print" style="font-size: 10px; font-weight:600;"></h3></div>
             </div>
         </div>
-        <div class="col-12 bg-secondary border my-3"></div>
+        <div class="col-12 bg-secondary  my-3" style=" border: 1px dotted #69727a;"></div>
         <div class="col-12 mb-3">
             <div class="row">
                 <div class="col-1 text-left"><h3 style="font-weight:600;font-size: 14px;">QTY</h3></div>
                 <div class="col text-center"><h3 style="font-weight:600;font-size: 14px;">PRODUK</h3></div>
-                <div class="col-2 text-left"><h3 style="font-weight:600;font-size: 14px;">HARGA</h3></div>
+                <div class="col text-left"><h3 style="font-weight:600;font-size: 14px;">HARGA</h3></div>
                 <div class="col text-right"><h3 style="font-weight:600;font-size: 14px;">SUBTOTAL</h3></div>
             </div>
         </div>
@@ -248,26 +250,26 @@ if(isset($_POST['tambahcuy'])){
             <div class="row">
                 <div class="col-1 text-center"><h3 style="font-weight:600;font-size: 14px;"><?php echo $c['quantity'] ?></h3></div>
                 <div class="col text-center"><h3 style="font-weight:600;font-size: 14px;"><?php echo $c['nama_produk'] ?></h3></div>
-                <div class="col-2 text-left" ><h3 style="font-weight:600;font-size: 14px;">Rp.<?php echo ribuan($c['harga_jual']) ?></h3></div>
+                <div class="col " ><h3 style="font-weight:600;font-size: 14px;">Rp.<?php echo ribuan($c['harga_jual']) ?></h3></div>
                 <div class="col text-right"><h3 style="font-weight:600;font-size: 14px;">Rp.<?php echo ribuan($subtotalcart3) ?></h3></div>
             </div>
         </div>
         <?php }?>
-        <div class="col-12 bg-secondary border my-3"></div>
+        <div class="col-12 bg-secondary  my-3" style=" border: 1.5px dotted #69727a;"></div>
         <div class="col-12">
             <h3 style="font-weight:600;font-size: 14px; word-spacing: 3em;">Subtotal   : <span class="float-right">Rp.<?php echo ribuan($subtotalcart2) ?></span></h3>
-            <h3 style="font-weight:600;font-size: 14px; ">PPN 11%&emsp;&emsp;&emsp;&ensp;&nbsp;: <span class="float-right" id="pajak">Rp. <?php echo ribuan($pajak) ?> </span></h3>
-            <h3 style="font-weight:600;font-size: 14px;">Total&emsp;&emsp;&emsp;&emsp;&emsp;: <div class="float-right"><span id="total" >Rp. <?php echo ribuan($subtotalcart4) ?></span></div></h3>
-            <h3 style="font-weight:800;font-size: 14px;">Tunai&emsp;&emsp;&emsp;&emsp;&ensp;: <div class="float-right">Rp.<span id="bayarnya1"></span></div></h3>
-            <h3 style="font-weight:600;font-size: 14px;  word-spacing: 3em;">Kembali    : <div class="float-right">Rp.<span id="total2"></span></div></h3>
+            <h3 style="font-weight:600;font-size: 14px; ">PPN 11%&emsp;&emsp;&nbsp;&ensp;&ensp;&nbsp;: <span class="float-right" id="pajak">Rp.<?php echo ribuan($pajak) ?> </span></h3>
+            <h3 style="font-weight:800;font-size: 14px;">Total&emsp;&emsp;&emsp;&emsp;&nbsp;&ensp;&ensp;: <div class="float-right"><span id="total" >Rp.<?php echo ribuan($subtotalcart4) ?></span></div></h3>
+            <h3 style="font-weight:600;font-size: 14px;">Tunai &emsp;&emsp;&emsp;&emsp;&emsp;: <div class="float-right">Rp.<span id="bayarnya1"></span></div></h3>
+            <h3 style="font-weight:600;font-size: 14px;  word-spacing: 3em;">Kembali&nbsp;&ensp;: <div class="float-right">Rp.<span id="total2"></span></div></h3>
         </div>
-        <div class="col-12 bg-secondary border my-3"></div>
+        <div class="col-12 bg-secondary  my-3" style=" border: 1.5px dotted #69727a;"></div>
         <div class="col-12">
             <h4 style="font-weight:600;font-size: 15px;">Catatan : <span id="new_catatan"></span></h4>
         </div>
-        <div class="col-12 bg-secondary border my-3"></div>
+        <div class="col-12 bg-secondary  my-3" style=" border: 1.5px dotted #69727a;"></div>
         <div class="col-12 text-center">
-            <h4 style="font-weight:600;font-size: 15px;">* Terima Kasih Telah Berbelanja Di Toko Kami *</h4>
+            <h4 style="font-weight:600;font-size: 15px;">-Terima Kasih Telah Berbelanja- -Di Toko Kami-</h4>
             <h4 style="font-weight:500;font-size: 14px;">Powered By PT.PINS</h4>
         </div>
     </div><!-- end row -->
