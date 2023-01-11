@@ -281,7 +281,6 @@ td.catatan {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    margin: 5mm;
     visibility: hidden;
   }
   #print,
@@ -305,13 +304,9 @@ td.catatan {
   @page {
     display: flex;
     text-align: center;
-    margin-left: 5mm;
     margin: 0;
   }
   #new_catatan {
     text-align: center;
-  }
-  .mb-0 {
-    font-size: 10px;
   }
 }
