@@ -1,5 +1,4 @@
-<!-- By : Adgrafika -->
-<!-- Di Larang Memperjual Source Code ini -->
+
 <?php
 	@ob_start();
 	session_start();
