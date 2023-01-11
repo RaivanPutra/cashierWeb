@@ -11,8 +11,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="favicon.ico">
-<link rel="icon" href="icon.ico" type="image/ico">
+ <link rel="icon" href="icon.png">
+  <link rel="icon" href="icon.png" type="image/png">
   <title>Login</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,7 +85,7 @@
             </form>
         </div>
         <div class="text-center small mt-4">
-            <p class="text-muted">Aplikasi kasir © <?php echo date('Y');?> - By : <a href="https://www.youtube.com/channel/UCyHwOyTkQBgwfWMOrblSUDg" class="span text-primary">Adgrafika</a></p>
+            <p class="text-muted">Aplikasi kasir © <?php echo date('Y');?> - By : <a href="#" class="span text-primary">Raivan</a></p>
         </div>
     </div>
 

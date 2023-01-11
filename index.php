@@ -255,11 +255,11 @@ if(isset($_POST['tambahcuy'])){
         <?php }?>
         <div class="col-12 bg-secondary border my-3"></div>
         <div class="col-12">
-            <h3 style="font-weight:600;font-size: 14px;">Subtotal   : <span class="float-right">Rp.<?php echo ribuan($subtotalcart2) ?></span></h3>
-            <h3 style="font-weight:600;font-size: 14px;">PPN 11%    : <span class="float-right" id="pajak">Rp. <?php echo ribuan($pajak) ?> </span></h3>
-            <h3 style="font-weight:600;font-size: 14px;">Total  : <div class="float-right"><span id="total" >Rp. <?php echo ribuan($subtotalcart4) ?></span></div></h3>
-            <h3 style="font-weight:600;font-size: 14px;">Tunai  : <div class="float-right">Rp.<span id="bayarnya1"></span></div></h3>
-            <h3 style="font-weight:600;font-size: 14px;">Kembali    : <div class="float-right">Rp.<span id="total2"></span></div></h3>
+            <h3 style="font-weight:600;font-size: 14px; word-spacing: 3em;">Subtotal   : <span class="float-right">Rp.<?php echo ribuan($subtotalcart2) ?></span></h3>
+            <h3 style="font-weight:600;font-size: 14px; ">PPN 11%&emsp;&emsp;&emsp;&ensp;&nbsp;: <span class="float-right" id="pajak">Rp. <?php echo ribuan($pajak) ?> </span></h3>
+            <h3 style="font-weight:600;font-size: 14px;">Total&emsp;&emsp;&emsp;&emsp;&emsp;: <div class="float-right"><span id="total" >Rp. <?php echo ribuan($subtotalcart4) ?></span></div></h3>
+            <h3 style="font-weight:800;font-size: 14px;">Tunai&emsp;&emsp;&emsp;&emsp;&ensp;: <div class="float-right">Rp.<span id="bayarnya1"></span></div></h3>
+            <h3 style="font-weight:600;font-size: 14px;  word-spacing: 3em;">Kembali    : <div class="float-right">Rp.<span id="total2"></span></div></h3>
         </div>
         <div class="col-12 bg-secondary border my-3"></div>
         <div class="col-12">

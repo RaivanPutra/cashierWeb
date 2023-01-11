@@ -1,5 +1,8 @@
 
-<?php include 'template/header.php';?>
+<?php 
+include 'template/header.php';
+include 'config.php';
+?>
 <br>
 <div class="row">
 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-3 pr-0">
