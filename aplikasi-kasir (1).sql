@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Jan 2023 pada 07.44
+-- Waktu pembuatan: 16 Jan 2023 pada 06.44
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -38,8 +38,8 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`idkategori`, `nama_kategori`, `tgl_dibuat`) VALUES
-(3, 'Makanan', '2023-01-09 04:29:47'),
-(5, 'Minuman', '2023-01-09 04:29:57');
+(1, 'Barang', '2023-01-09 09:36:42'),
+(2, 'Makanan', '2023-01-11 08:15:13');
 
 -- --------------------------------------------------------
 
@@ -76,9 +76,7 @@ CREATE TABLE `laporan` (
 --
 
 INSERT INTO `laporan` (`idlaporan`, `no_nota`, `idpelanggan`, `catatan`, `totalbeli`, `pembayaran`, `kembalian`, `tgl_sub`) VALUES
-(20, 'AD91231214001', 0, '', 35000, 40000, 5000, '2023-01-09 05:14:30'),
-(21, 'AD91231216401', 0, '', 15000, 15000, 0, '2023-01-09 05:17:08'),
-(22, 'AD91231226641', 0, '', 10000, 12000, 2000, '2023-01-09 05:26:24');
+(12, 'AD121231048001', 0, '', 160950, 170000, 9050, '2023-01-12 05:05:56');
 
 -- --------------------------------------------------------
 
@@ -100,7 +98,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id_login`, `nama_toko`, `username`, `password`, `alamat`, `telepon`) VALUES
-(1, 'PT.PINS', 'user', '$2y$10$tI4m1YtKdfMPgteUsoXLAuPVz5VUKt2Zf4nr6ACx.bNXMjmicmOoW', 'bandung', '0873737448');
+(1, 'PT.PINS', 'user', '$2y$10$cBMliEVA9dW2ImtU/Euc5eWhgEJVZ6BQB9i4boAdEijGs.uOxPTrC', 'Bandung', '0873737448');
 
 -- --------------------------------------------------------
 
@@ -120,8 +118,7 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`idpelanggan`, `nama_pelanggan`, `telepon_pelanggan`, `alamat_pelanggan`) VALUES
-(8, 'Affan', '04980589083', 'Cianjur'),
-(9, 'user', '0898927393', 'asdad');
+(10, 'ari', '2342124', 'czcasczxc');
 
 -- --------------------------------------------------------
 
@@ -145,8 +142,8 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`idproduk`, `idkategori`, `kode_produk`, `nama_produk`, `harga_modal`, `harga_jual`, `stock`, `tgl_input`) VALUES
-(7, 3, 'BRG001', 'Nasi Goreng', 12000, 15000, 6, '2023-01-09 06:38:25'),
-(8, 5, 'BRG002', 'Teh Tarik', 9000, 10000, 11, '2023-01-09 05:26:17');
+(9, 1, 'BRG001', 'Wi-Fi', 70000, 75000, 24, '2023-01-12 03:48:46'),
+(10, 1, 'BRG002', 'Router', 65000, 70000, 4, '2023-01-12 03:48:53');
 
 -- --------------------------------------------------------
 
@@ -166,10 +163,8 @@ CREATE TABLE `tb_nota` (
 --
 
 INSERT INTO `tb_nota` (`idnota`, `no_nota`, `idproduk`, `quantity`) VALUES
-(21, 'AD91231214001', 7, 1),
-(22, 'AD91231214001', 8, 2),
-(24, 'AD91231216401', 7, 1),
-(25, 'AD91231226641', 8, 1);
+(44, 'AD121231048001', 9, 1),
+(45, 'AD121231048001', 10, 1);
 
 --
 -- Indexes for dumped tables
@@ -225,19 +220,19 @@ ALTER TABLE `tb_nota`
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `idkategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idkategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `idcart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `idcart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT untuk tabel `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `idlaporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idlaporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `login`
@@ -249,19 +244,19 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `idpelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idpelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `idproduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idproduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_nota`
 --
 ALTER TABLE `tb_nota`
-  MODIFY `idnota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `idnota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
