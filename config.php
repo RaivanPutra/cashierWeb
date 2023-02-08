@@ -2,7 +2,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "aplikasi-kasir";
+$dbname = "aplikasi_kasir";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 if (!$conn){
@@ -11,5 +11,3 @@ if (!$conn){
     
 date_default_timezone_set('Asia/Jakarta');   
 error_reporting(0);
-
-?>
